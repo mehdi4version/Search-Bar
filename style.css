@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-image: linear-gradient(90deg,#7d5fff, #7158e2);
+  font-family: 'Roboto', sans-serif;
+  margin : 0; /* The space you will see on the text project starter is due to h1 */
+  display: flex; /* Center everything and put it in row */
+  align-items: center; /* Since it is column. The align-items will align vertically */
+  justify-content: center; /*horizontal align*/
+  height: 100vh;
+  overflow: hidden;
+}
+
+.search{
+  position: relative;
+  height: 50px;
+}
+
+.search .input{
+  background-color: #fff;
+  border: 0;
+  font-size: 20px;
+  padding: 15px;
+  height:50px;
+  width: 50px;
+  transition: width 0.3s ease;
+}
+
+.btn {
+  background-color: white;
+  border: 0;
+  cursor: pointer;
+  font-size:20px;
+  position: absolute;
+  top:0;
+  left: 0; /*top zero bottom zero means the icon will be on the top left corner of placeholder*/
+  height: 50px;
+  width: 50px;
+  transition: transform 0.3s ease; /*button push over*/
+}
+
+.btn:focus,
+.input:focus{
+  outline: none;
+}
+
+.search.active .input{
+  width: 200px;
+}
+
+.search.active .btn{
+  transform: translateX(198px); /*move to right*/
+  
+}
